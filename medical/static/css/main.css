@@ -1,0 +1,133 @@
+ 
+ .app{
+
+	background-color: green;
+	color: yellow;
+	font-style: italic;
+}
+
+.img1{
+
+	width:20%;
+	height: auto;
+	border: 3px solid black;
+	border-radius: 60px;
+	margin-left: 30px;
+	margin-right: auto; 
+
+}
+
+.img2{
+	
+	width:15%;
+	height: auto;
+	border: 3px solid black;
+	border-radius: 60px;
+	margin-left: 17px;
+	margin-right: auto; 
+
+}
+.img3{
+	
+	width:18%;
+	height: auto;
+	border: 3px solid black;
+	border-radius: 60px;
+	margin-left: 17px;
+	margin-right: auto; 
+
+}
+
+.img4{
+	
+	width:18%;
+	height: auto;
+	border: 3px solid black;
+	border-radius: 60px;
+	margin-left: 17px;
+	margin-right: auto; 
+
+}
+.img5{
+	
+	width:18%;
+	height: auto;
+	border: 3px solid black;
+	border-radius: 60px;
+	margin-left: 17px;
+	margin-right: auto; 
+
+}
+
+.hello-msg{
+
+	color: white;
+	margin-right: 10px;
+	
+}
+ a.hello-msg{
+
+ 	text-decoration: none;
+	list-style: none;
+	margin-left: 10px;
+}
+
+
+<style>
+	#logo{
+
+	}
+	body{
+
+		background-color:#ebeff5;
+	}
+
+	#total-orders{
+
+		background-color:#4cb4c7;
+	}
+
+	#orders-delivered{
+		background-color: #7abecc;
+
+	}
+
+	#orders-pending{
+
+		background-color: #7CD1C0;
+	}
+
+
+.social:hover {
+     -webkit-transform: scale(1.1);
+     -moz-transform: scale(1.1);
+     -o-transform: scale(1.1);
+ }
+ .social {
+     -webkit-transform: scale(0.8);
+     /* Browser Variations: */
+     
+     -moz-transform: scale(0.8);
+     -o-transform: scale(0.8);
+     -webkit-transition-duration: 0.5s;
+     -moz-transition-duration: 0.5s;
+     -o-transition-duration: 0.5s;
+ }
+
+/*
+    Multicoloured Hover Variations
+*/
+ 
+ #social-fb:hover {
+     color: #3B5998;
+ }
+ #social-li:hover {
+     color: #4099FF;
+ }
+ #social-gp:hover {
+     color: #d34836;
+ }
+ #social-em:hover {
+     color: #f39c12;
+ }
+</style>
