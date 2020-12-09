@@ -1,0 +1,114 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<br>
+
+<marquee class="app"><h1>***MEDISCAPE***</h1></marquee>
+<br>
+<p><h4><i>“THE MAXIMS OF MEDICINE
+
+Before you examine the body of a patient,
+Be patient to learn his story.
+For once you learn his story,
+You will also come to know
+His body.
+Before you diagnose any sickness,
+Make sure there is no sickness in the mind or heart.
+For the emotions in a man’s moon or sun,
+Can point to the sickness in
+Any one of his other parts.
+Before you treat a man with a condition,
+Know that not all cures can heal all people.
+For the chemistry that works on one patient,
+May not work for the next,
+Because even medicine has its own
+Conditions.
+Before asserting a prognosis on any patient,
+Always be objective and never subjective.
+For telling a man that he will win the treasure of life,
+But then later discovering that he will lose,
+Will harm him more than by telling him
+That he may lose,
+But then he wins.
+</i></li></h4></p>
+<br>
+
+<img class="img1" src="{% static 'images/medics.jpg' %}">
+<img class="img2" src="{% static 'images/doctor.jpg' %}">
+<img class="img3" src="{% static 'images/heart.jpg' %}">
+<img class="img4" src="{% static 'images/drug.jpg' %}">
+<img class="img5" src="{% static 'images/blood.jpg' %}">
+<br>
+<br>
+{% include 'status.html' %}
+<br>
+<br>
+<div class="row">
+<div class="col-md-5">
+		<h5>CUSTOMERS</h5>
+		<hr>
+		<div class="card card-body">
+	<a class="btn btn-outline-primary my-2 my-sm-0  btn-sm btn-block" href="">Create Customer</a>
+			<table class="table table-sm">
+				<tr>
+					<th></th>
+					<th>Customer</th>
+					<th>Phone</th>
+					<th>Details</th>
+				</tr>
+				<br>
+				{% for customer in customers %}
+
+					<tr>
+						<th></th>
+						<td>{{customer.name}}</td>
+						<td>{{customer.phone}}</td>
+						<td><a href="{% url 'customer' customer.id %}" class="btn btn-outline-info btn-sm">View</a></td>
+					</tr>	
+
+				{% endfor %}
+		
+				
+			</table>
+		</div>
+	</div>
+
+	<div class="col-md-7">
+		<h5>LAST FEW ORDERS SET</h5>
+		<hr>
+		<div class="card card-body">
+			<table class="table table-sm">
+				<tr>
+					<th>Medicine Name</th>
+					<th>Price</th>
+					<th>Date Orderd</th>
+					<th>Status</th>
+					<th>Update</th>
+					<th>Remove</th>
+				</tr>
+			
+				{% for order in orders %}
+
+					<tr>
+					
+						<td>{{order.medicine}}</td>
+						<td>{{order.medicine.price}}</td>
+						<td>{{order.date_created}}</td>
+						<td>{{order.status}}</td>
+						<td><a href="{% url 'update_order' order.id %}" class="btn btn-outline-warning btn-sm">Update</a></td>
+						<td><a href="{% url 'delete_order' order.id %}" class="btn btn-outline-danger btn-sm">Delete</a></td>
+					</tr>	
+
+				{% endfor %}
+		
+			</table>
+		</div>
+	</div>
+
+</div>
+
+
+{% endblock %}

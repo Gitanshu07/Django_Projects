@@ -1,0 +1,43 @@
+{%  extends 'main.html' %}
+
+{% block content %}
+
+{% load static %}
+
+		<br>
+		<div class="row">
+			<div class="col-md">
+				<div class="card card-body">
+					<h5><i>Medicos</i></h5>
+				</div>
+				<br>
+				<img class="img1" src="{% static 'images/medi.jpg' %}">
+				<img class="img2" src="{% static 'images/med4.jpg' %}">
+				<img class="img3" src="{% static 'images/med2.jpg' %}">
+				<img class="img4" src="{% static 'images/med3.jpg' %}">
+				<img class="img5" src="{% static 'images/med5.jpg' %}">
+				<br>
+				<div class="card card-body">
+					<table class="table">
+						<tr>
+							<th>Medicine</th>
+							<th>Category</th>
+							<th>Price</th>
+							<th>Description</th>
+						</tr>
+
+						{% for i in medicine %}
+							<tr>
+								<td>{{i.name}}</td>
+								<td>{{i.category}}</td>
+								<td>{{i.price}}</td>
+								<td>{{i.description}}</td>
+							</tr>
+						{% endfor %}
+					</table>
+				</div>
+			</div>
+			
+		</div>
+
+{% endblock content %}

@@ -1,0 +1,32 @@
+{%  extends 'main.html' %}
+{% load static %}
+{% block content %}
+<br>
+<br>
+<div class="row">
+	<div class="col-md"> 
+		<div class="card card-body">
+			<form action="" method="POST">
+				{% csrf_token %}
+				{{ formset.management_form }}
+				{% for form in formset %}
+					{{form}}
+					<hr>
+				{% endfor %}
+				<input type="submit" name="Submit" class="btn btn-outline-success my-2 my-sm-0">	
+			</form>
+		</div>
+	</div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+{% endblock %}
